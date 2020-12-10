@@ -1,10 +1,13 @@
-<?php 
+ <?php 
+ session_start();
+ if (!isset($_SESSION['username'])) {
 
-session_start();
-
-/*if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {*/
-if (!isset($_SESSION['username'])) {
-header('Location: logout.php');
+    $message = "You are not logged in. Please log in first and try again";
+    echo "<script>
+    alert('$message');
+    window.location.href = 'xp_ress_login.php';
+    </script>";
+    exit;
 }
 ?>
 <!DOCTYPE html>

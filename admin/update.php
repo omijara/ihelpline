@@ -1,11 +1,10 @@
 <?php
 
 $ID= $_GET["id"];
-$name= $_GET['name'];
-$age= $_GET['age'];
-$number = $_GET['mnum'];
-$address = $_GET['paddress'];
-
+$name= $_POST['name'];
+$birth_date= $_POST['dob'];
+$phone = $_POST['number'];
+$result = $_POST['result'];
 
 require_once('../dbcon.php');
 
